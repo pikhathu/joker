@@ -10,6 +10,12 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}`);
 });
 
+client.on('message', (msg) => {
+    if ('.lol' === msg.content) {
+        msg.reply('Y u leffing?');
+    }
+});
+
 client.login(process.env.TOKEN);
 
 const joker = (): void => {
